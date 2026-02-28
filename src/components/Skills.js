@@ -17,7 +17,7 @@ export default function Skills() {
                     <div className={styles.skillBox}>
                         <img src='Skills1.png' style={{ borderRadius: '10px' }} alt="Frameworks Icon"></img>
                         <h3>Frameworks and Databases</h3>
-                        React.js, Node.js, Express.js, PostgreSQL, MySQL, Sequelize
+                        React.js, Node.js, Express.js, PostgreSQL, MySQL, Sequelize, Flask
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} s container justifyContent='center'>
