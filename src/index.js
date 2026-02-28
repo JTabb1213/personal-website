@@ -86,7 +86,7 @@ function AppLayout() {
                                 <MenuIcon />
                             </IconButton>
                         </Hidden>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Jack Tabb</Typography>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>John Tabb</Typography>
                         <Hidden smDown>
                             <Box className={styles.menuLinks}>
                                 {links.map(link => {
