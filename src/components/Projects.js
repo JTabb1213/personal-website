@@ -50,18 +50,20 @@ export default function Projects() {
                         url: 'https://github.com/JTabb1213/weather'
                     }, {
                         label: 'Go to app',
-                        url: process.env.REACT_APP_CITYINFO_URL || '/apps/cityinfo'
+                        url: 'https://city-info-ui.web.app/'
                     }]}
                     image="/cityinfo-app.png" />
             </Grid>
             <Grid item>
-                <div className={`${styles.ribbon}`}><span>In progress</span></div>
                 <ProjectCard
                     title="RestaurantReviewer"
                     desc="Allows a user to review a restaurant using a GPS location"
                     links={[{
+                        label: 'Github',
+                        url: 'https://github.com/JTabb1213/reviews'
+                    }, {
                         label: 'Go to app',
-                        url: 'https://my-deploy-12345.uc.r.appspot.com'
+                        url: 'https://disco-plane-488917-i4.web.app/'
                     }]}
                     image="/restaurant.png">
                 </ProjectCard>
