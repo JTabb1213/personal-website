@@ -41,7 +41,7 @@ export default function Projects() {
             <h1 className={styles.sectionIntro}>Check out my creations.</h1>
         </Grid>
         <Grid item container justifyContent="center" alignItems="center" columnSpacing={5}>
-            <Grid item sx={{ paddingTop: '30px' }}>
+            <Grid item>
                 <ProjectCard
                     title="CityInfo"
                     desc="Search for a city to get a map, current weather, and upcoming events"
