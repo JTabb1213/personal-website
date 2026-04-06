@@ -10,21 +10,21 @@ export default function Skills() {
                     <div className={styles.skillBox}>
                         <img src='Skills3.png' style={{ borderRadius: '10px' }} alt="Language Icon"></img>
                         <h3>Languages</h3>
-                        C++, JavaScript, Typescript, HTML/CSS, Mainframe Assembler, Python
+                        JavaScript, TypeScript, Python, C++, HTML/CSS, Bash, x86 Assembly
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} xl={4} container justifyContent='center'>
                     <div className={styles.skillBox}>
                         <img src='Skills1.png' style={{ borderRadius: '10px' }} alt="Frameworks Icon"></img>
-                        <h3>Frameworks and Databases</h3>
-                        React.js, Node.js, Express.js, PostgreSQL, MySQL, Sequelize, Flask
+                        <h3>Frameworks</h3>
+                        React.js, Node.js, Express.js, Flask, Angular, RESTful APIs
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} s container justifyContent='center'>
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={4} container justifyContent='center'>
                     <div className={styles.skillBox}>
                         <img src='Skills2.png' style={{ borderRadius: '10px' }} alt="Tools Icon"></img>
-                        <h3>Tools and technologies</h3>
-                        Git, Linux, Docker, Google Cloud Platform, Cloud Run, Redis, Postman, OAS3, Github actions
+                        <h3>Data Storage & Tools</h3>
+                        PostgreSQL, MySQL, Redis, Linux (RHEL), Docker, Google Cloud Platform, Oracle Cloud Infrastructure, Git, AWS
                     </div>
                 </Grid>
             </Grid>

@@ -3,32 +3,53 @@ import { Box, Button, CardActions, Grid, Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 
-function ProjectCard({ title, desc, links, image }) {
+function ProjectCard({ title, desc, links, image, status }) {
     const handleLinkClicked = (link) => {
         if (link.url) {
             window.open(link.url)
         }
     }
-    return <Card elevation={10} sx={{ width: { xs: '200px', sm: '250px' }, height: '260px', }}>
-        <CardContent>
+    return <Card elevation={10} sx={{ width: { xs: '200px', sm: '250px' }, height: '300px', position: 'relative', overflow: 'hidden' }}>
+        {status && (
+            <Box sx={{
+                position: 'absolute',
+                top: 28,
+                right: -38,
+                width: '160px',
+                backgroundColor: '#4caf50',
+                color: '#fff',
+                fontSize: '11px',
+                fontWeight: '900',
+                textAlign: 'center',
+                padding: '4px 0',
+                transform: 'rotate(45deg)',
+                zIndex: 10,
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.3)',
+            }}>
+                {status}
+            </Box>
+        )}
+        <CardContent sx={{ paddingBottom: 0 }}>
             <Grid container direction="column">
                 <Grid container justifyContent="center">
-                    <Box component="img" sx={{ height: { xs: '5em' } }} src={image} />
+                    <Box sx={{ backgroundColor: '#fff', borderRadius: '50%', width: '5em', height: '5em', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                        <Box component="img" sx={{ width: '100%', height: '100%', objectFit: 'cover' }} src={image} alt={title} />
+                    </Box>
                 </Grid>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div" sx={{ marginTop: '10px' }}>
                     {title}
                 </Typography>
-                <Typography sx={{ height: '50px' }} variant="body2" color="text.secondary">
+                <Typography sx={{ height: '70px' }} variant="body2" color="text.secondary">
                     {desc}
                 </Typography>
             </Grid>
         </CardContent>
-        <CardActions sx={{ display: 'flex', justifyContent: "center", allignItems: 'center' }}>
-            {links && links.filter(link => {
-                return link.url
-            }).map(link => {
-                return <Button size="small" onClick={() => handleLinkClicked(link)}>{link.label}</Button>
-            })}
+        <CardActions sx={{ display: 'flex', justifyContent: "center", alignItems: 'center', paddingTop: 0 }}>
+            {links && links.filter(link => link.url).map(link => (
+                <Button key={link.label} size="small" onClick={() => handleLinkClicked(link)}>{link.label}</Button>
+            ))}
         </CardActions>
     </Card>
 }
@@ -66,6 +87,22 @@ export default function Projects() {
                         url: 'https://disco-plane-488917-i4.web.app/'
                     }]}
                     image="/restaurant.png">
+                </ProjectCard>
+
+            </Grid>
+            <Grid item>
+                <ProjectCard
+                    title="Crypto Data Hub"
+                    desc="Added live multi exchange data for a few coins. Still need to work on more features"
+                    links={[{
+                        label: 'Github',
+                        url: 'https://github.com/JTabb1213/app-'
+                    }, {
+                        label: 'Go to app',
+                        url: 'https://adminapp-489616.web.app'
+                    }]}
+                    image="/crypto_images.png"
+                    status="In Progress">
                 </ProjectCard>
 
             </Grid>

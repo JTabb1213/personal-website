@@ -16,4 +16,7 @@
     width: 8rem;
     border-radius: 50%;
     border: 1px solid #F06000;
+    object-fit: cover;
+    object-position: center 32%;
+    display: block;
 }
